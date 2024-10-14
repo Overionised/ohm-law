@@ -1,4 +1,4 @@
- # Kvadraticka funkce
+ # Ohmuv zakon
 
 # Zadání
 Napište funkce na elektrotechnické výpočty podle Ohmova zákona s využitím všech kombinací počátečních zadání (napětí, odpor, proud, výkon).  Pro každý ze vzorců použijte funkci.
