@@ -79,22 +79,35 @@ long double getInt() {
 }
 
 void defhodnot() {
-    int pocet;
-    rovnice();
-    cout<<"definujte prosim jen 2 hodnoty \n";
+    int count = 0;
+    U = 0; R = 0; I = 0; P = 0;
+
+
+    cout << "Definujte prosím přesně 2 hodnoty. \n";
+
     cout << "Napětí [V]: ";
     U = getInt();
-    if (U!=0){pocet++;}
+    if (U != 0) count++;
+
     cout << "Odpor [Ohm]: ";
     R = getInt();
-    if (R!=0){pocet++;}
+    if (R != 0) count++;
+
     cout << "Proud [A]: ";
     I = getInt();
-    if (I!=0){pocet++;}
+    if (I != 0) count++;
+
     cout << "Výkon [W]: ";
     P = getInt();
+    if (P != 0) count++;
 
+    if (count != 2) {
+        cout << "Prosím, definujte přesně 2 hodnoty a ostatní nechte 0." << endl;
+        defhodnot();
+    }
 }
+
+
 
 void calculator(){
 
