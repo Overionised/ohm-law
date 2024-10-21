@@ -79,13 +79,18 @@ long double getInt() {
 }
 
 void defhodnot() {
-        rovnice();
+    int pocet;
+    rovnice();
+    cout<<"definujte prosim jen 2 hodnoty \n";
     cout << "Napětí [V]: ";
     U = getInt();
+    if (U!=0){pocet++;}
     cout << "Odpor [Ohm]: ";
     R = getInt();
+    if (R!=0){pocet++;}
     cout << "Proud [A]: ";
     I = getInt();
+    if (I!=0){pocet++;}
     cout << "Výkon [W]: ";
     P = getInt();
 
