@@ -14,7 +14,7 @@ void illusion();
 long double U, R, I, P;
 
 void rovnice() {
-    cout <<R"("ELEKTROTECHNICKÉ VÝPOČTY
+    cout <<R"(ELEKTROTECHNICKÉ VÝPOČTY
 
 Zadej hodnoty veličin nebo 0 pro dopočet
 )"<<endl;
@@ -82,7 +82,7 @@ void defhodnot() {
     int count = 0;
     U = 0; R = 0; I = 0; P = 0;
 
-
+    rovnice();
     cout << "Definujte prosím přesně 2 hodnoty. \n";
 
     cout << "Napětí [V]: ";
@@ -131,7 +131,7 @@ void calculator(){
         if(U != 0){
             I = U/R;
         }else{
-            I = P/R;
+            I = sqrt(P/R);
             U = P/I;
             return;
         }
@@ -144,5 +144,5 @@ int main(){
     defhodnot();
     calculator();
     illusion();
-    cout<<"Napětí je "<<U<< " V\n Odpor je: "<<U<<" ohm\n Proud je "<<I<<"A \n výkon je "<<P<<endl;
+    cout<<"Napětí je "<<U<< " V\n Odpor je: "<<R<<" ohm\n Proud je "<<I<<" A \n výkon je "<<P<<" w"<<endl;
 }
