@@ -123,7 +123,7 @@ void calculator(){
                 return;
             }
         }else{
-            R = U/(P*P);
+            R = (U*U)/P;
             I = P/U;
             return;
         }
